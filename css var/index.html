@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update CSS Variables</title>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <h1 class="head">
+        Update CSS Variables with <span class="spl">jS</span>
+    </h1>
+    <form class="controls">
+        <label for="spacing">Spacing</label>
+        <input type="range" id="spacing" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur</label>
+        <input type="range" id="blur"  name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="col">Base Color</label>
+        <input type="color" id="col" name="col" value="#ffc600">
+    </form>
+    <br>
+
+    <div class="border">
+        <img class="img" src="https://www.planetware.com/wpimages/2019/10/switzerland-in-pictures-most-beautiful-places-matterhorn.jpg">
+    </div>
+
+  <script src="app.js"></script>  
+</body>
+</html>

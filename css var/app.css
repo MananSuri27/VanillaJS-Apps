@@ -1,0 +1,40 @@
+:root{
+    --col:#ffc600;
+    --spacing:10px;
+    --blur:10px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: #193549;
+    color:white;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.img{
+    padding: var(--spacing);
+    background: var(--col);
+    filter: blur(var(--blur));
+}
+
+.spl{
+    color:var(--col);
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:900px){
+    .controls{
+        flex-direction: column;
+    }
+
+    .img{
+        width: 400px;
+    }
+}

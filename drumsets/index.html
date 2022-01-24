@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Drumsets</title>
+</head>
+<body>
+    <div class="sets">
+        <div data-key="65" class="drums">
+            <h1 class="dhead">A</h1>
+            <span class="dbody"> clap</span>
+        </div>
+        <div data-key="83" class="drums">
+            <h1 class="dhead">S</h1>
+            <span class="dbody"> boom</span>
+        </div>
+        <div data-key="68" class="drums">
+            <h1 class="dhead">D</h1>
+            <span class="dbody"> hihat</span>
+        </div>
+        <div data-key="70" class="drums">
+            <h1 class="dhead">F</h1>
+            <span class="dbody"> kick</span>
+        </div>
+
+    </div>
+
+    <audio data-key="65" src="clap.wav"></audio>
+    <audio data-key="83" src="boom.wav"></audio>
+    <audio data-key="68" src="hihat.wav"></audio>
+    <audio data-key="70" src="kick.wav"></audio>
+
+    <script>
+
+        
+        window.addEventListener("keydown",function(e){
+            const aud=document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            if(!aud) return;
+            aud.play();
+            const box=document.querySelector(`div[data-key="${e.keyCode}"]`);
+            box.classList.add("playing");
+            box.addEventListener("transitionend",function(){
+                box.classList.remove("playing");
+            })
+
+
+        });
+
+        const keys=document.querySelectorAll(".drums");
+
+        for(let key of keys){
+            key.addEventListener("click",function(){
+                const kd=key.getAttribute("data-key");
+                const aud=document.querySelector(`audio[data-key="${kd}"]`);
+            if(!aud) return;
+            aud.play();
+            key.classList.add("playing");
+            key.addEventListener("transitionend",function(){
+                key.classList.remove("playing");
+            })
+
+            });
+        }
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

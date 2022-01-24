@@ -1,0 +1,50 @@
+body{
+  background: url("background.jpg");
+  font-family: sans-serif;
+}
+
+.sets{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.drums{
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  text-shadow: 0 0 .5rem black;
+
+}
+
+.dhead{
+  text-shadow: 0rem 0rem 1rem yellow;
+}
+
+.dbody{
+  color:yellow;
+  text-shadow: 0rem 0rem 3rem white;
+
+}
+
+.playing{
+  transform:scale(1.1);
+  border-color: yellow;
+  box-shadow: 0rem 0rem 1rem yellow;
+}
+
+
+
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
